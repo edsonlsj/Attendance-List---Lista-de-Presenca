@@ -1,0 +1,147 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Attendance List</title>
+
+  <!-- Bootstrap início -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap fim -->
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+  <script src="app.js"></script>
+
+</head>
+
+<body onload="carregaListaListas()">
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5 ">
+    <div class="container collapse navbar-collapse justify-content-md-center">
+
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-address-book"></i>
+        Attendance List <span class="sr-only">(current)</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">Register
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="consulta.html">Consult</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">Consult</h1>
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Full Name" id="nomeCompleto" />
+      </div>
+
+      <div class="col-md-4">
+        <select class="form-control" id="problemaRespiracao">
+          <option value="">Breathing problems</option>
+          <option value="1">Yes</option>
+          <option value="2">No</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" placeholder="Age" id="idade" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="City - Area" id="cidade" />
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" placeholder="+44 00000000" id="telefone" />
+      </div>
+      <div class="col-md-3">
+        <input type="date" class="form-control" id="data" />
+        <p></p>
+      </div>
+
+      <div class="col-md-1 d-flex ">
+        <button type="button" class="btn btn-primary" onclick="pesquisarLista()">
+          <i style="font-size: 2em" class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="col-md-1 d-flex ">
+        <button type="button" class="btn btn-primary" onclick="imprimir()">
+          <i style="font-size: 2em" class="fas fa-print"></i>
+        </button>
+      </div>
+      <div class="col-md-1 d-flex ">
+        <button type="button" class="btn btn-danger" onclick="limpaTudo()">
+          <i style="font-size: 2em" class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+
+    <div class="row" id="print">
+      <div class="col">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Breathing Problem</th>
+              <th>Age</th>
+              <th>City</th>
+              <th>Phone Number</th>
+              <th>Date</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody id="listaListas">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <footer class="footer mt-auto py-3 fixed-bottom justify-content-md-center">
+    <div class="container">
+      <span class="text-muted">Edson Luiz dos Santos Junior - Web Developer. <br />
+        Contact: +44 7754540377 - contato@edsonluiz.info - <a href="https://www.linkedin.com/in/edsonlsj/">LinkedIn -
+          https://www.linkedin.com/in/edsonlsj</a> -
+        <a href="https://wa.me/+447754540377">
+          <i class="fa fa-phone-square" aria-hidden="true"></i>
+          WhatsApp
+        </a>
+      </span>
+    </div>
+  </footer>
+</body>
+
+</html>
