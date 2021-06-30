@@ -30,3 +30,7 @@ Deletar tem o sinal de X e é de cor vermelha, este tem função de apagar todos
 Pesquisar é de cor azul e tem como função exibir os dados salvos com base nas informações feita pelo filtro. Caso os dados não existam nada é Feito, Assim como se todos os campos estiverem vazios todos os dados são mostrados. Imprimir te permite imprimir uma lista personalizada com os dados que estão sendo exibidos na lista abaixo.
 
 A lista mostra os dados em forma de tabela. A última coluna tem como função deletar um dado específico de uma linha. Abaixo temos a lista onde é exibida todos os dados.
+
+
+
+
