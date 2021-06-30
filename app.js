@@ -252,9 +252,8 @@ function carregaListaListas(listas = Array(), filtro = false) {
 
 
  function imprimir(){
+	tela_impressao = window.open('about:blank');
 	var conteudo = `
-	
-
   <!-- Bootstrap início -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -288,12 +287,11 @@ function carregaListaListas(listas = Array(), filtro = false) {
   </footer>
 	`;
 	console.log(conteudo)
-   tela_impressao = window.open('about:blank');
+   
    tela_impressao.document.write(conteudo);
    tela_impressao.window.print();
    tela_impressao.window.close();
 	
-
 }
 
 function limpaTudo(){
