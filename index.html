@@ -133,7 +133,12 @@
 
 
     <script>
+      //dia
       let dia = new Date().getDate()
+      if (dia < 9) {
+        dia = `0${dia}`
+      }
+      //mes
       let mes = new Date().getMonth()
       mes = mes + 1
       if (mes < 9) {
