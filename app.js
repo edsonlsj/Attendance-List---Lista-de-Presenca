@@ -252,7 +252,7 @@ function carregaListaListas(listas = Array(), filtro = false) {
 
 
  function imprimir(){
-	tela_impressao = window.open('about:blank');
+
 	var conteudo = `
   <!-- Bootstrap início -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -286,6 +286,7 @@ function carregaListaListas(listas = Array(), filtro = false) {
     </div>
   </footer>
 	`;
+	tela_impressao = window.open(``,conteudo);
 	console.log(conteudo)
    
    tela_impressao.document.write(conteudo);
@@ -296,10 +297,10 @@ function carregaListaListas(listas = Array(), filtro = false) {
 
 function limpaTudo(){
 
-	var resultado = confirm("Deseja excluir tuda a lista ?");
+	var resultado = confirm("Do you want to delete the entire list?");
         if (resultado == true) {
 					localStorage. clear()
-          alert("Lista Excluida!"); 
+          alert("Deleted List!"); 
 					location.reload()   
         }
 	
