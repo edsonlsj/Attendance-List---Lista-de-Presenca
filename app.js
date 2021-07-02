@@ -70,39 +70,39 @@ class Bd {
 
 		let listasFiltradas = Array()
 		listasFiltradas = this.recuperarTodosRegistros()
-		console.log(listasFiltradas);
-		console.log(lista)
+		//console.log(listasFiltradas);
+		//console.log(lista)
 
 		
 		//nomeCompleto
 		if(lista.nomeCompleto != ''){
-			console.log("filtro de nomeCompleto");
+			//console.log("filtro de nomeCompleto");
 			listasFiltradas = listasFiltradas.filter(d => d.nomeCompleto == lista.nomeCompleto)
 		}
 
 		//problemaRespiracao
 		if(lista.problemaRespiracao != ''){
-			console.log("filtro de problemaRespiracao");
+			//console.log("filtro de problemaRespiracao");
 			listasFiltradas = listasFiltradas.filter(d => d.problemaRespiracao == lista.problemaRespiracao)
 		}
 		//Idade
 		if(lista.idade != ''){
-			console.log("filtro de idade");
+			//console.log("filtro de idade");
 			listasFiltradas = listasFiltradas.filter(d => d.idade == lista.idade)
 		}
 		//cidade
 		if(lista.cidade != ''){
-			console.log("filtro de cidade");
+			//console.log("filtro de cidade");
 			listasFiltradas = listasFiltradas.filter(d => d.cidade == lista.cidade)
 		}
 		//telefone
 		if(lista.telefone != ''){
-			console.log("filtro de telefone");
+			//console.log("filtro de telefone");
 			listasFiltradas = listasFiltradas.filter(d => d.telefon == lista.telefone)
 		}
 		//data
 		if(lista.data != ''){
-			console.log("filtro de data");
+			//console.log("filtro de data");
 			listasFiltradas = listasFiltradas.filter(d => d.data == lista.data)
 		}
 		
@@ -227,7 +227,7 @@ function carregaListaListas(listas = Array(), filtro = false) {
 			window.location.reload()
 		}
 		linha.insertCell(6).append(btn)
-		console.log(d)
+		//console.log(d)
 	})
 
  }
@@ -241,6 +241,7 @@ function carregaListaListas(listas = Array(), filtro = false) {
 	let cidade = document.getElementById("cidade").value
 	let telefone = document.getElementById("telefone").value
 	let data = document.getElementById("data").value
+	//console.log(data)
 
 	let lista = new Lista(nomeCompleto, problemaRespiracao,idade, cidade, telefone,data)
 
@@ -287,7 +288,7 @@ function carregaListaListas(listas = Array(), filtro = false) {
   </footer>
 	`;
 	tela_impressao = window.open(``,conteudo);
-	console.log(conteudo)
+	//console.log(conteudo)
    
    tela_impressao.document.write(conteudo);
    tela_impressao.window.print();
