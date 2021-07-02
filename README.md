@@ -1,5 +1,17 @@
 # Attendance-List---Lista-de-Presenca
 
+### Link Download
+https://github.com/edsonlsj/Attendance-List---Lista-de-Presenca
+
+### Instagram
+https://www.instagram.com/edsonluiz.info/
+
+### LinkedIn
+https://www.linkedin.com/in/edsonlsj/
+
+### YoutubeTutorial DesckTop
+https://www.youtube.com/watch?v=DlkvLv-LpMw
+
 ## English - Ingles
 
 This application aims to digitally control attendance lists at events. The main focus is to be a source of research to warn people in case of coronavirus contamination, but it can also be used for other purposes.
